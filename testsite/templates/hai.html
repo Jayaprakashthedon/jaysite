@@ -1,0 +1,23 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>first page</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+
+<h1><font color="white">Welcome to {{name}} App </font></h1>
+<form action="add", method="post">
+    {% csrf_token %}
+    Enter 1st number: <input type="text" name="Num1"><br>
+    Enter 2nd number: <input type="text" name="Num2"><br>
+    <input type="submit">
+</form>
+
+{% endblock %}
+
+</body>
+</html>
+
